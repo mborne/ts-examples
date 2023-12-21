@@ -1,7 +1,7 @@
 {
-  "name": "typescript-examples",
+  "name": "@mborne/ts-examples",
   "version": "0.1.0",
-  "description": "Some TypeScript examples",
+  "description": "Some TypeScript examples written to get started with tooling setup (ts-node, mocha, chai, nyc)",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
@@ -18,6 +18,7 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "MBorne <mborne@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true
 }

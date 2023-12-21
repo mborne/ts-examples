@@ -1,6 +1,6 @@
-# typescript-examples
+# ts-examples
 
-Some TypeScript examples written to get started with this language.
+Some TypeScript examples written to get started with tooling setup (ts-node, mocha, chai, nyc).
 
 ## Examples
 
@@ -37,3 +37,8 @@ npm run test test/pow.spec.ts
 # run all tests
 npm run coverage
 ```
+
+## License
+
+[MIT](LICENSE)
+
