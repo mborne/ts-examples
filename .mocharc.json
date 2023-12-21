@@ -1,0 +1,5 @@
+{
+    "recursive": true,
+    "extension": ["ts", "tsx"],
+    "require": "ts-node/register"
+}

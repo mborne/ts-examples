@@ -1,0 +1,20 @@
+{
+  "name": "ts-examples",
+  "version": "0.1.0",
+  "description": "some typescript examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "chai": "^4.3.10",
+    "cross-env": "^7.0.3",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "author": "",
+  "license": "ISC"
+}
