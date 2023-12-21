@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body>
+    <table>
+    <tbody>
+        <tr>
+            <td>pow(2,8)</td>
+            <td id="pow-result"></td>            
+        </tr>
+        <tr>
+            <td>take(fibonacci(0,1),20)</td>
+            <td id="fibonacci-result"></td>
+        </tr>
+    </tbody>
+    </table>
+    
+    <script type="text/javascript" src="./dist/bundle.js"></script>
+    <script type="text/javascript">
+        document.getElementById('pow-result').innerHTML = pow(2,8);
+        document.getElementById('fibonacci-result').innerHTML = '['+take(fibonacci(0,1),20).join(', ')+']';
+    </script>
+</body>
+</html>
