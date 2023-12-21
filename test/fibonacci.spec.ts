@@ -1,10 +1,10 @@
 import "mocha";
 import { expect } from "chai";
-import { fibonaci } from "../src/finonaci";
+import { fibonacci } from "../src/fibonacci";
 
-describe("fibonaci", () => {
-    describe("fibonaci(0,1)", () => {
-        const g = fibonaci(0,1);
+describe("fibonacci", () => {
+    describe("fibonacci(0,1)", () => {
+        const g = fibonacci(0,1);
         it("should return 0 for 0th element", () => {
             expect(g.next().value).to.equal(0);
         });

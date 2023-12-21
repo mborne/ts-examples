@@ -1,7 +1,7 @@
 /**
  * Computes x^n
  */
-export function* fibonaci(a: number, b: number): Generator<number> {
+export function* fibonacci(a: number, b: number): Generator<number> {
     let u = a;
     let v = b;
     while(true){

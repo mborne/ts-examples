@@ -1,8 +1,21 @@
-# ts-examples
+# typescript-examples
 
-Some TypeScript examples written to get started with this language...
+Some TypeScript examples written to get started with this language.
+
+## Examples
+
+| Description         | Source                               | Test                                             | CLI                                  |
+| ------------------- | ------------------------------------ | ------------------------------------------------ | ------------------------------------ |
+| `pow(x,n)` as `x^n` | [src/pow.ts](src/pow.ts)             | [test/pow.spec.ts](test/pow.spec.ts)             |                                      |
+| Fibonacci generator | [src/fibonacci.ts](src/fibonacci.ts) | [test/fibonacci.spec.ts](test/fibonacci.spec.ts) | [cli/fibonacci.ts](cli/fibonacci.ts) |
 
 ## Usage
+
+### Run cli examples
+
+```bash
+npx ts-node cli/fibonacci.ts
+```
 
 ### Run tests
 
@@ -15,8 +28,11 @@ npm run test
 npm run test test/pow.spec.ts
 ```
 
-### Run cli examples
+### Check test coverage
+
+> See [.nycrc](.nycrc) 
 
 ```bash
-npx ts-node cli/fibonaci.ts
+# run all tests
+npm run coverage
 ```
