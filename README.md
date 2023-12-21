@@ -4,10 +4,11 @@ Some TypeScript examples written to get started with this language.
 
 ## Examples
 
-| Description         | Source                               | Test                                             | CLI                                  |
-| ------------------- | ------------------------------------ | ------------------------------------------------ | ------------------------------------ |
-| `pow(x,n)` as `x^n` | [src/pow.ts](src/pow.ts)             | [test/pow.spec.ts](test/pow.spec.ts)             |                                      |
-| Fibonacci generator | [src/fibonacci.ts](src/fibonacci.ts) | [test/fibonacci.spec.ts](test/fibonacci.spec.ts) | [cli/fibonacci.ts](cli/fibonacci.ts) |
+| Description                                  | Source                               | Test                                             | CLI                                  |
+| -------------------------------------------- | ------------------------------------ | ------------------------------------------------ | ------------------------------------ |
+| `pow(x,n)` as `x^n`                          | [src/pow.ts](src/pow.ts)             | [test/pow.spec.ts](test/pow.spec.ts)             |                                      |
+| Fibonacci **generator**                      | [src/fibonacci.ts](src/fibonacci.ts) | [test/fibonacci.spec.ts](test/fibonacci.spec.ts) | [cli/fibonacci.ts](cli/fibonacci.ts) |
+| Take n elements from a **generic** generator | [src/take.ts](src/take.ts)           | [test/fibonacci.spec.ts](test/take.spec.ts)      | [cli/take.ts](cli/take.ts)           |
 
 ## Usage
 
