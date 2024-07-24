@@ -1,30 +1,47 @@
 {
-  "name": "@mborne/ts-examples",
+  "name": "ts-examples",
   "version": "0.1.0",
-  "description": "Some TypeScript examples written to get started with tooling setup (ts-node, mocha, chai, nyc)",
-  "main": "dist/bundle.js",
+  "description": "Some TypeScript examples written to get started with tooling setup",
+  "main": "dist/ts-examples.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "build": "webpack --mode=production",
-    "start": "webpack serve --mode=production",
     "test": "mocha",
-    "coverage": "nyc mocha"
+    "coverage": "nyc mocha",
+    "compile": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
+    "build:clean": "rm -rf ./build",
+    "build": "npm-run-all build:clean compile && node ./scripts/prepare-package-json"
   },
-  "devDependencies": {
-    "@istanbuljs/nyc-config-typescript": "^1.0.2",
-    "@types/chai": "^4.3.11",
-    "@types/mocha": "^10.0.6",
-    "chai": "^4.3.10",
-    "cross-env": "^7.0.3",
-    "mocha": "^10.2.0",
-    "nyc": "^15.1.0",
-    "ts-loader": "^9.5.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3",
-    "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+  "engines": {
+    "node": ">=20.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mborne/ts-examples.git"
+  },
+  "keywords": [
+    "typescript",
+    "examples",
+    "tooling"
+  ],
   "author": "MBorne <mborne@users.noreply.github.com>",
   "license": "MIT",
-  "private": true
+  "bugs": {
+    "url": "https://github.com/mborne/ts-examples/issues"
+  },
+  "homepage": "https://github.com/mborne/ts-examples#readme",
+  "devDependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.7",
+    "chai": "^5.1.1",
+    "mocha": "^10.7.0",
+    "npm-run-all": "^4.1.5",
+    "nyc": "^17.0.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
 }

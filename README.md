@@ -1,6 +1,10 @@
 # ts-examples
 
-Some TypeScript examples written to get started with tooling setup (ts-node, mocha, chai, nyc).
+Some TypeScript examples written to get started with tooling setup.
+
+## Requirements
+
+* [NodeJS >= 20](https://nodejs.org/fr)
 
 ## Examples
 
@@ -15,7 +19,7 @@ Some TypeScript examples written to get started with tooling setup (ts-node, moc
 ### Run cli examples
 
 ```bash
-npx ts-node cli/fibonacci.ts
+npx tsx cli/fibonacci.ts
 ```
 
 ### Run tests
@@ -42,3 +46,7 @@ npm run coverage
 
 [MIT](LICENSE)
 
+
+## Resources
+
+* [thesametech.com - Building TypeScript libraries to ESM and CommonJS](https://thesametech.com/how-to-build-typescript-project/)
