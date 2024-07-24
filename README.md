@@ -44,12 +44,35 @@ npm run coverage
 
 ### Bundling
 
-See [webpack.config.js](webpack.config.js) :
+See [tsup.config.ts](tsup.config.ts), [package.json - main, module, types and exports](package.json) :
 
 ```bash
 npm run build
-npm run start
 ```
+
+It allows :
+
+* Usage in [index.html](index.html)
+* Usage with `import` syntax (ES module) :
+
+```js
+import {pow} from '@mborne/ts-examples';
+
+console.log(pow(10,3));
+```
+
+* Usage with `require` syntax (CommonJS) :
+
+```js
+const pow = require('@mborne/ts-examples').pow;
+
+console.log(pow(10,3));
+```
+
+
+## Credits
+
+Bunding method taken from [Turfjs](https://github.com/Turfjs/turf/blob/master/tsup.config.ts)
 
 ## License
 
