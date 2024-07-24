@@ -11,20 +11,36 @@
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
-    "@types/chai": "^4.3.11",
-    "@types/mocha": "^10.0.6",
-    "chai": "^4.3.10",
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.7",
+    "chai": "^5.1.1",
     "cross-env": "^7.0.3",
-    "mocha": "^10.2.0",
-    "nyc": "^15.1.0",
+    "mocha": "^10.7.0",
+    "nyc": "^17.0.0",
     "ts-loader": "^9.5.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3",
-    "webpack": "^5.89.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4",
+    "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^5.0.4"
   },
   "author": "MBorne <mborne@users.noreply.github.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/mborne/ts-examples/issues"
+  },
+  "homepage": "https://github.com/mborne/ts-examples#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mborne/ts-examples.git"
+  },
+  "keywords": [
+    "typescript",
+    "examples",
+    "tooling"
+  ],
+  "engines": {
+    "node": ">=20.0"
+  }
 }

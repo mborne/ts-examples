@@ -1,5 +1,5 @@
 {
     "recursive": true,
     "extension": ["ts", "tsx"],
-    "require": "ts-node/register"
+    "node-option": ["import=tsx"]
 }
