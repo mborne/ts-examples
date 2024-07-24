@@ -1,11 +1,26 @@
 {
   "name": "@mborne/ts-examples",
   "version": "0.1.0",
-  "description": "Some TypeScript examples written to get started with tooling setup (ts-node, mocha, chai, nyc)",
-  "main": "dist/ts-examples.js",
+  "description": "Some TypeScript examples written to get started with tooling setup (tsx, mocha, chai, nyc, tsup)",
+  "type": "module",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    }
+  },
   "scripts": {
-    "build": "webpack --mode=production",
-    "start": "webpack serve --mode=production",
+    "build": "tsup --config ./tsup.config.ts",
     "test": "mocha",
     "coverage": "nyc mocha"
   },
@@ -17,12 +32,9 @@
     "cross-env": "^7.0.3",
     "mocha": "^10.7.0",
     "nyc": "^17.0.0",
-    "ts-loader": "^9.5.1",
+    "tsup": "^8.2.2",
     "tsx": "^4.16.2",
-    "typescript": "^5.5.4",
-    "webpack": "^5.93.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+    "typescript": "^5.5.4"
   },
   "author": "MBorne <mborne@users.noreply.github.com>",
   "license": "MIT",

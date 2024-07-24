@@ -14,9 +14,9 @@
         </tr>
     </tbody>
     </table>
-    
-    <script type="text/javascript" src="./dist/ts-examples.js"></script>
-    <script type="text/javascript">
+
+    <script type="module">
+        import {pow,take,fibonacci} from './dist/esm/index.js';
         document.getElementById('pow-result').innerHTML = pow(2,8); 
         document.getElementById('fibonacci-result').innerHTML = '['+take(fibonacci(0,1),20).join(', ')+']';
     </script>

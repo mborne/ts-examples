@@ -1,6 +1,6 @@
 # ts-examples
 
-Some TypeScript examples written to get started with tooling setup ([tsx](https://tsx.is/getting-started), mocha, chai, nyc).
+Some TypeScript examples written to get started with tooling setup ([tsx](https://tsx.is/getting-started), mocha, chai, nyc and [tsup](https://tsup.egoist.dev/)).
 
 ## Requirements
 
