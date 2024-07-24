@@ -1,6 +1,6 @@
 # ts-examples
 
-Some TypeScript examples written to get started with tooling setup ([tsx](https://tsx.is/getting-started), mocha, chai, nyc).
+Some TypeScript examples written to get started with tooling setup ([tsx](https://tsx.is/getting-started), mocha, chai, nyc and [tsup](https://tsup.egoist.dev/)).
 
 ## Requirements
 
@@ -41,6 +41,38 @@ npm run test test/pow.spec.ts
 # run all tests
 npm run coverage
 ```
+
+### Bundling
+
+See [tsup.config.ts](tsup.config.ts), [package.json - main, module, types and exports](package.json) :
+
+```bash
+npm run build
+```
+
+It allows :
+
+* Usage in [index.html](index.html)
+* Usage with `import` syntax (ES module) :
+
+```js
+import {pow} from '@mborne/ts-examples';
+
+console.log(pow(10,3));
+```
+
+* Usage with `require` syntax (CommonJS) :
+
+```js
+const pow = require('@mborne/ts-examples').pow;
+
+console.log(pow(10,3));
+```
+
+
+## Credits
+
+Bunding method taken from [Turfjs](https://github.com/Turfjs/turf/blob/master/tsup.config.ts)
 
 ## License
 
