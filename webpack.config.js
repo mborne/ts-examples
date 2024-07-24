@@ -1,6 +1,6 @@
 const path = require('path');
 
-module.exports = {
+const config = {
     entry: './src/index.ts',
     module: {
         rules: [
@@ -16,12 +16,16 @@ module.exports = {
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
-    },
+    }
+};
+
+/**
+ * Export pow & co to global
+ */
+const globalConfig = Object.assign({}, config, {
     output: {
-        filename: 'bundle.js',
+        filename: 'ts-examples.js',
         path: path.resolve(__dirname, 'dist'),
-        // library: 'myLib',
-        // libraryTarget: 'umd',
         libraryTarget: 'global',
         globalObject: 'this',
     },
@@ -31,5 +35,18 @@ module.exports = {
         },
         compress: true,
         port: 9000,
-    },
-};
+    }
+});
+
+
+const commonJsConfig = Object.assign({}, config, {
+    output: {
+        filename: 'index.js',
+        path: path.resolve(__dirname, 'dist/cjs'),
+        libraryTarget: "commonjs"
+    }
+});
+
+
+module.exports = [globalConfig,commonJsConfig];
+

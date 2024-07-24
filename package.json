@@ -2,7 +2,7 @@
   "name": "@mborne/ts-examples",
   "version": "0.1.0",
   "description": "Some TypeScript examples written to get started with tooling setup (ts-node, mocha, chai, nyc)",
-  "main": "dist/bundle.js",
+  "main": "dist/ts-examples.js",
   "scripts": {
     "build": "webpack --mode=production",
     "start": "webpack serve --mode=production",

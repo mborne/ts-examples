@@ -42,6 +42,15 @@ npm run test test/pow.spec.ts
 npm run coverage
 ```
 
+### Bundling
+
+See [webpack.config.js](webpack.config.js) :
+
+```bash
+npm run build
+npm run start
+```
+
 ## License
 
 [MIT](LICENSE)
