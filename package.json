@@ -33,14 +33,13 @@
     "lint:fix": "biome check --write .",
     "lint:ci": "biome ci .",
     "format": "biome format --write .",
-    "cli:fibonacci": "tsx cli/fibonacci.ts",
-    "cli:take": "tsx cli/take.ts",
+    "cli:fibonacci": "node cli/fibonacci.ts",
+    "cli:take": "node cli/take.ts",
     "check": "npm run typecheck && npm run lint && npm run coverage"
   },
   "devDependencies": {
     "@types/node": "^26.6.2",
     "@vitest/coverage-v8": "^5.0.1",
-    "tsx": "^4.16.2",
     "typescript": "^5.9.3",
     "vite": "^8.3.0",
     "vite-plugin-dts": "^5.1.1",
