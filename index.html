@@ -1,12 +1,16 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@mborne/ts-examples</title>
 </head>
 <body>
     <table>
     <tbody>
         <tr>
             <td>pow(2,8)</td>
-            <td id="pow-result"></td>            
+            <td id="pow-result"></td>
         </tr>
         <tr>
             <td>take(fibonacci(0,1),20)</td>
@@ -15,10 +19,16 @@
     </tbody>
     </table>
 
+    <!--
+        Le serveur de développement Vite transpile les sources TypeScript à la
+        volée : `npm run dev` suffit, plus besoin de builder avant d'ouvrir la
+        démonstration.
+    -->
     <script type="module">
-        import {pow,take,fibonacci} from './dist/esm/index.js';
-        document.getElementById('pow-result').innerHTML = pow(2,8); 
-        document.getElementById('fibonacci-result').innerHTML = '['+take(fibonacci(0,1),20).join(', ')+']';
+        import { pow, take, fibonacci } from '/src/index.ts';
+        document.getElementById('pow-result').innerHTML = pow(2, 8);
+        document.getElementById('fibonacci-result').innerHTML =
+            '[' + take(fibonacci(0, 1), 20).join(', ') + ']';
     </script>
 </body>
 </html>
