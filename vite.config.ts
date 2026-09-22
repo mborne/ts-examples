@@ -1,5 +1,6 @@
 import dts from "vite-plugin-dts";
-import { defineConfig } from "vite";
+// `vitest/config` réexporte le defineConfig de Vite en y ajoutant la clé `test`.
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
     build: {
@@ -29,4 +30,25 @@ export default defineConfig({
             insertTypesEntry: true,
         }),
     ],
+
+    test: {
+        include: ["test/**/*.spec.ts"],
+        // Bibliothèque de fonctions pures : aucun besoin du DOM.
+        environment: "node",
+        coverage: {
+            provider: "v8",
+            // Mesure tout src/, y compris les fichiers qu'aucun test n'importe.
+            include: ["src/**/*.ts"],
+            // Baril de ré-export : aucune logique à couvrir.
+            exclude: ["src/index.ts"],
+            reporter: ["text", "text-summary", "html", "lcov"],
+            reportsDirectory: "coverage",
+            thresholds: {
+                lines: 90,
+                functions: 90,
+                branches: 90,
+                statements: 90,
+            },
+        },
+    },
 });

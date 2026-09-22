@@ -23,5 +23,5 @@
         "forceConsistentCasingInFileNames": true,
         "skipLibCheck": true
     },
-    "include": ["src", "cli", "vite.config.ts"]
+    "include": ["src", "test", "cli", "vite.config.ts"]
 }

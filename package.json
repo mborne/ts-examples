@@ -26,8 +26,9 @@
     "dev": "vite",
     "build": "vite build",
     "typecheck": "tsc --noEmit",
-    "test": "mocha",
-    "coverage": "nyc mocha",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
     "lint:ci": "biome ci .",
@@ -37,17 +38,13 @@
     "check": "npm run typecheck && npm run lint && npm run coverage"
   },
   "devDependencies": {
-    "@istanbuljs/nyc-config-typescript": "^1.0.2",
-    "@types/chai": "^4.3.16",
-    "@types/mocha": "^10.0.7",
     "@types/node": "^26.6.2",
-    "chai": "^5.1.1",
-    "mocha": "^10.7.0",
-    "nyc": "^17.0.0",
+    "@vitest/coverage-v8": "^5.0.1",
     "tsx": "^4.16.2",
     "typescript": "^5.9.3",
     "vite": "^8.3.0",
-    "vite-plugin-dts": "^5.1.1"
+    "vite-plugin-dts": "^5.1.1",
+    "vitest": "^5.0.1"
   },
   "author": "MBorne <mborne@users.noreply.github.com>",
   "license": "MIT",
