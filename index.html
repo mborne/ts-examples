@@ -25,10 +25,11 @@
         démonstration.
     -->
     <script type="module">
-        import { pow, take, fibonacci } from '/src/index.ts';
+        import { fibonacci, pow, take } from '/src/index.ts';
+
         document.getElementById('pow-result').innerHTML = pow(2, 8);
         document.getElementById('fibonacci-result').innerHTML =
-            '[' + take(fibonacci(0, 1), 20).join(', ') + ']';
+            `[${take(fibonacci(0, 1), 20).join(', ')}]`;
     </script>
 </body>
 </html>

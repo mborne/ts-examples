@@ -1,27 +1,27 @@
 {
-    "compilerOptions": {
-        /* Langage et bibliothèques */
-        "target": "ES2023",
-        "lib": ["ES2023", "DOM"],
-        "types": ["node"],
+  "compilerOptions": {
+    /* Langage et bibliothèques */
+    "target": "ES2023",
+    "lib": ["ES2023", "DOM"],
+    "types": ["node"],
 
-        /* Modules : c'est Vite qui bundle, TypeScript ne fait que vérifier */
-        "module": "ESNext",
-        "moduleResolution": "bundler",
-        "allowImportingTsExtensions": true,
-        "isolatedModules": true,
-        "verbatimModuleSyntax": true,
-        "moduleDetection": "force",
+    /* Modules : c'est Vite qui bundle, TypeScript ne fait que vérifier */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
 
-        /* Aucune émission : `vite build` produit le JS, vite-plugin-dts les .d.ts */
-        "noEmit": true,
+    /* Aucune émission : `vite build` produit le JS, vite-plugin-dts les .d.ts */
+    "noEmit": true,
 
-        /* Vérifications */
-        "strict": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "forceConsistentCasingInFileNames": true,
-        "skipLibCheck": true
-    },
-    "include": ["src", "test", "cli", "vite.config.ts"]
+    /* Vérifications */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src", "test", "cli", "vite.config.ts"]
 }
