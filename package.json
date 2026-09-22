@@ -1,40 +1,51 @@
 {
   "name": "@mborne/ts-examples",
   "version": "0.1.0",
-  "description": "Some TypeScript examples written to get started with tooling setup (tsx, mocha, chai, nyc, tsup)",
+  "description": "Some TypeScript examples written to get started with tooling setup (vite, vitest, biome)",
   "type": "module",
-  "main": "dist/cjs/index.cjs",
-  "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "exports": {
     "./package.json": "./package.json",
     ".": {
       "import": {
-        "types": "./dist/esm/index.d.ts",
-        "default": "./dist/esm/index.js"
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
       },
       "require": {
-        "types": "./dist/cjs/index.d.cts",
-        "default": "./dist/cjs/index.cjs"
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
       }
     }
   },
   "scripts": {
-    "build": "tsup --config ./tsup.config.ts",
-    "test": "mocha",
-    "coverage": "nyc mocha"
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "lint:ci": "biome ci .",
+    "format": "biome format --write .",
+    "cli:fibonacci": "node cli/fibonacci.ts",
+    "cli:take": "node cli/take.ts",
+    "check": "npm run typecheck && npm run lint && npm run coverage"
   },
   "devDependencies": {
-    "@istanbuljs/nyc-config-typescript": "^1.0.2",
-    "@types/chai": "^4.3.16",
-    "@types/mocha": "^10.0.7",
-    "chai": "^5.1.1",
-    "cross-env": "^7.0.3",
-    "mocha": "^10.7.0",
-    "nyc": "^17.0.0",
-    "tsup": "^8.2.2",
-    "tsx": "^4.16.2",
-    "typescript": "^5.5.4"
+    "@biomejs/biome": "^2.5.14",
+    "@types/node": "^26.6.2",
+    "@vitest/coverage-v8": "^5.0.1",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.0",
+    "vite-plugin-dts": "^5.1.1",
+    "vitest": "^5.0.1"
   },
   "author": "MBorne <mborne@users.noreply.github.com>",
   "license": "MIT",
@@ -50,9 +61,12 @@
   "keywords": [
     "typescript",
     "examples",
-    "tooling"
+    "tooling",
+    "vite",
+    "vitest",
+    "biome"
   ],
   "engines": {
-    "node": ">=20.0"
+    "node": ">=22.18.0"
   }
 }

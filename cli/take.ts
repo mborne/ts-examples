@@ -1,5 +1,5 @@
-import { fibonacci } from "../src/fibonacci";
-import { take } from "../src/take";
+import { fibonacci } from "../src/fibonacci.ts";
+import { take } from "../src/take.ts";
 
-let result = take(fibonacci(0,1),15);
+const result = take(fibonacci(0, 1), 15);
 console.log(JSON.stringify(result));

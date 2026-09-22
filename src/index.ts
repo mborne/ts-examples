@@ -1,3 +1,3 @@
-export * from './pow';
-export * from './take';
-export * from './fibonacci';
+export * from "./fibonacci.js";
+export * from "./pow.js";
+export * from "./take.js";
